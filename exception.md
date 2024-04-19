@@ -157,7 +157,7 @@ public class Test {
 	}
 }
 ```
-ArithmeticException 예외가 발생하면 예외 메시지와 스택 트레이스 즉, 예외가 발생한 위치와 관련된 자세한 정보를 출력합니다.
+* ArithmeticException 예외가 발생하면 예외 메시지와 스택 트레이스 즉, 예외가 발생한 위치와 관련된 자세한 정보를 출력합니다.
 
 <br>
 
@@ -204,7 +204,7 @@ public class Test {
 	}
 }
 ```
-finally 구문은 try문에 실행 여부와 상관없이 무조건 실행된다. 그래서 위 예제가 실해되면 '1' -> (예외 발생) -> '2' 순으로 출력될 것이다.
+* finally 구문은 try문에 실행 여부와 상관없이 무조건 실행된다. 그래서 위 예제가 실해되면 '1' -> (예외 발생) -> '2' 순으로 출력될 것이다.
 
 <br>
 
@@ -259,7 +259,7 @@ public class Test {
 ```
 단순히 return 부분을 `throw new GenderException();`로 변경해주고 `class GenderException extends RuntimeException`을 추가하면 예외를 발생시킬 수 있다.
 
-그럼 이번에는 Exception에 대해 배워보도록 하자.
+이번에는 Exception에 대해 배워보도록 하자.
 
 <br>
 
@@ -286,7 +286,7 @@ public class Test {
 
 일단 `class GenderException extends RuntimeException`에서 `class GenderException extends Exception`으로 변경해보자 그럼 결과는 컴파일 오류가 발생할 것이다.
 
-Why? 그건 RuntimeException과 Exception에 차이를 알아야 한다.
+왜 컴파일 오류가 발생할까? 그걸 알기 위해서는 RuntimeException과 Exception에 차이를 알아야 한다.
 
 RuntimeException은 예외 처리를 안 해도 되는 반면, Exception은 예외 처리를 필수적으로 해야 하는데 이건 컴파일러에서 강제적으로 요구하기 때문이다. 그리고 RuntimeException은 예측 불가능한 예외라는 뜻으로 Unchecked Exception라고 불리며, Exception은 예측 가능한 예외라는 뜻으로 Checked Exception라고 불린다.
 
@@ -316,7 +316,7 @@ public class Test {
 	}
 }
 ```
-위 예제처럼 try ~ catch문을 통해 GenderException 예외를 처리할 수 있다.
+* 위 예제처럼 try ~ catch문을 통해 GenderException 예외를 처리할 수 있다.
 
 <br>
 
@@ -405,14 +405,14 @@ public class Test {
 }
 ```
 
-위 예제는 try ~ catch 문만을 사용하여 작성한 코드이다.
+* 위 예제는 try ~ catch 문만을 사용하여 작성한 코드이다.
 
 ```java
 예외 발생
 당신의 성별은 여자 입니다.
 ```
 
-결과를 보면 남자, 여자 문자열 모두 실행되었다.
+* 결과를 보면 남자, 여자 문자열 모두 실행되었다.
 
 ```java
 class GenderException extends Exception {
@@ -438,7 +438,7 @@ public class Test {
 }
 ```
 
-위 예제는 throws를 사용한 코드이다.
+* 위 예제는 throws를 사용한 코드이다.
 
 ```
 예외 발생
@@ -450,11 +450,15 @@ public class Test {
 
 추가적으로 throw와 throws에 대해 좀 더 설명하겠다.
 
+<br>
+
 ## throw & throws
 
 thorw는 개발자가 의도적으로 예외를 발생시키므로써 예외가 발생할 수 있는 코드가 있다는 것을 알려준다.
 
 throws는 지금 위치한 메서드가 아닌 다른 메서드 또는 상위 메서드에서 예외 처리를 하도록 예외를 던지는 것이다.
+
+throws 예시를 들자면 다음과 같다.
 
 ```java
 class ExceptionClass extends Exception {
@@ -479,7 +483,7 @@ public class Example {
 	}
 }
 ```
-위 예제는 다른 메서드에 예제를 던져서 처리하는 방식이다.
+* 다른 메서드에 예외를 던져서 처리하는 방식이다.
 
 ```java
 class ExceptionClass extends Exception {
@@ -500,4 +504,4 @@ public class Example {
 	}
 }
 ```
-위 예제는 상위 메서드에 예외를 던져서 처리하는 방식이다.
+* 상위 메서드에 예외를 던져서 처리하는 방식이다.
