@@ -10,4 +10,17 @@ public class PostService {
 }
 ```
 
-* 자동으로 final 필드를 생성하여 의존성 주입을 편리하게 처리한다.
+* @RequiredArgsConstructor는 final로 선언된 모든 멤버에 대한 생성자를 만들어준다.
+
+```java
+@Service
+public class PostService {
+	private final PostMapper postMapper;
+
+	public PostService(PostMapper postMapper){
+		this.postMapper = postMapper;
+	}
+
+}
+```
+
