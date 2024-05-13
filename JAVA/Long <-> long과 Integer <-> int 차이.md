@@ -8,7 +8,7 @@ long은 null 사용 불가능
 
 <br>
 
-# Integer 
+# Integer과 int 차이
 
 Integer은 null 사용 가능
 
@@ -50,4 +50,4 @@ Integer와 Long은 참조형(Reference Type) 변수이기 때문이다.
 
 반면, 참조형 변수는 Stack 영역에 주소 값을 저장하는데, 이 주소 값은 Heap 영역에서 필요한 데이터를 가지고 올 때 사용한다.
 
-그리고 기본값은 null이므로 값이 없으면 Stack 영역에 null이 들어간다. 
+그래서 Heap 영역에서 가져올 데이터가 없으면 가져올 수 없다는 의미로 Stack 영역에서 null 표현이 가능하다. 
