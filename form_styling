@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원가입</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <header>
+        <h1>회원가입</h1>
+    </header>
+    <section>
+        <form id="sign_up_form" action="survey.html" method="post">
+            <div class="form-group">
+                <label>이름: </label>
+                <input id="name" type="text">
+            </div>
+            <div class="form-group">
+                <label>이메일: </label>
+                <input id="email" type="email">
+            </div>
+            <div class="form-group">
+                <label>비밀번호: </label>
+                <input id="pw" type="password">
+            </div>
+            <div class="form-group">
+                <label>비밀번호 확인: </label>
+                <input id="pw_check" type="password">
+            </div>
+
+            <button type="submit" onClick="location.href='survey.html'">확인</button>
+        </form>
+    </section>
+</body>
+</html>
+
+
+1. 부모 요소에 display: flex 주기
+.form-group {
+    display: flex;
+}
+
+2. label한테 고정 너비 주기
+.form-group label {
+    width: 120px;
+}
+
+3. input한테 남는 공간 차지하게 만들기
+.form-group input {
+    flex: 1;
+}
+
+4. 전체 폼에 padding, margin 주기
+#sign_up_form {
+    border: 1px solid black;
+    padding: 20px;
+    width: 400px;
+    margin: 0 auto;
+}
+
+5. 입력칸 꾸미기 (선택사항)
+.form-group input {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+
+
+
+
+
+
